@@ -60,20 +60,23 @@ public class Tela {
 		
 		//Jlabel Resultado Imc
 		JLabel lblresultadoImc = new  JLabel();
-		lblresultadoImc.setBounds(200, 400, 200, 30);
+		lblresultadoImc.setBounds(130, 400, 70, 30);
 		lblresultadoImc.setFont(new Font("Arial", Font.PLAIN, 20));
+		lblresultadoImc.setForeground(new Color(36, 138, 38));
 		//Jlabel ResultadoEstado
 		JLabel lblresultadoEstado = new JLabel();
-		lblresultadoEstado.setBounds(300, 450, 200, 30);
+		lblresultadoEstado.setBounds(170, 450, 200, 30);
 		lblresultadoEstado.setFont(new Font("Arial", Font.PLAIN, 20));
-		
+		lblresultadoEstado.setForeground(new Color(36, 138, 38));
 		
 		//JTextField Peso
 		JTextField  tfPeso = new JTextField();
 		tfPeso.setBounds(100, 90, 100, 30);
+		tfPeso.getText();
 		//JTextField Altura
 		JTextField tfAltura = new JTextField();
 		tfAltura.setBounds(100, 150, 100, 30);
+		tfAltura.getText();
 		//Button Calcular
 		Button btnCalcular = new Button("Calcular");
 		btnCalcular.setFont(new Font("arial", Font.PLAIN, 30));
@@ -105,13 +108,14 @@ public class Tela {
 				double peso = Double.parseDouble(StringPeso);
 				
 				String StringAltura = tfAltura.getText();
-				double altura = Double.parseDouble(StringPeso);
+				double altura = Double.parseDouble(StringAltura);
 				
 				Conta conta = new Conta();
 				conta.calcular(peso, altura);
+
 				
-				
-				lblresultadoImc.setText(Double.toString(conta.getResultado()) );
+				lblresultadoImc.setText(Double.toString(conta.getResultado()));
+				lblresultadoEstado.getText();
 			}
 		});
 		
